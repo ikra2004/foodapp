@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍝 The MealDB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <h1>🍝 The MealDB</h1>
+            <div class="nav-links">
+                <a href="#" class="button" onclick="fetchMeals()">Home</a>
+                <button id="low-btn">Low Price</button>
+                <button id="high-btn">High Price</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <h1>Welcome to TheMealDB</h1>
+            <p>Your open, crowd-sourced database of recipes from around the world.</p>
+            <button class="paypal-button">PayPal</button>
+            <p class="support-text">
+                Click above to upgrade your Recipe API to premium for just $3 a month. Cancel anytime.
+            </p>
+        </div>
+
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Search for a meal...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="meal-container" id="meal-container"></div>
+    </main>
+
+    <footer>
+        <div id="line"></div>
+        <h2>Random Ingredients</h2>
+        <div class="ingredients">
+            <div class="ingredient">
+                <img src="https://www.themealdb.com/images/ingredients/Salt%20Cod.png" alt="Salt Cod">
+                <p>Salt Cod</p>
+            </div>
+            <div class="ingredient">
+                <img src="https://www.themealdb.com/images/ingredients/Mustard%20Powder.png" alt="Mustard Powder">
+                <p>Mustard Powder</p>
+            </div>
+            <div class="ingredient">
+                <img src="https://www.themealdb.com/images/ingredients/Banana.png" alt="Banana">
+                <p>Banana</p>
+            </div>
+        </div>
+        <p>© 2024 TheMealDB. Proudly built in the UK.</p>
+    </footer>
+
+    <div id="meal-modal" class="modal">
+        <div class="modal-content">
+            <button id="modal-back-button" class="back-button">⬅ Back</button>
+            <h2 id="modal-title"></h2>
+            <p id="modal-price"></p>
+            <img id="modal-img" alt="Meal">
+            <div id="modal-instructions-container">
+                <h3>Recipe Instructions:</h3>
+                <p id="modal-instructions"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
